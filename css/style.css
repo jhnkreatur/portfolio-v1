@@ -66,12 +66,15 @@ p {
 
 a {
   text-decoration: none;
+  color: var(--dull-white);
 }
 
 section {
   min-height: calc(100vh - 60px);
   margin-top: 60px;
   position: relative;
+  padding-bottom: 2em;
+  background-color: rgba(80, 79, 79, 0.082);
 }
 
 .spacer {
@@ -347,7 +350,6 @@ section {
 .nav__link:hover {
   color: var(--bright-yellow);
   transform: scale(1.125);
-  text-shadow: 3px 2px 2px springgreen;
   transition: all 250ms ease;
 }
 .nav__social {
@@ -355,19 +357,17 @@ section {
 }
 
 .scroll__down {
-  padding: 0em 0.8em;
   position: absolute;
   right: -10px;
-  /* bottom: -80px; */
   transform: rotate(90deg);
-  border: 0.005rem solid var(--bright-yellow);
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
   cursor: pointer;
+  display: flex;
 }
 
 .scroll__item__right {
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
   animation: upAndDown 1s ease-in infinite;
 }
 
@@ -393,6 +393,7 @@ section {
   margin-bottom: var(--big--space);
   text-transform: capitalize;
   font-size: 1.75rem;
+  padding-top: var(--big--space);
 }
 
 .section__description {
@@ -428,18 +429,12 @@ section {
   padding: 0.5rem 0;
 }
 
-/* .fas,
-.fab {
-  color: var(--bright-yellow);
-  font-size: 1rem;
-} */
-
-.fa-circle {
-  color: springgreen;
+.social__media a {
+  font-size: 50px;
 }
 
-.social__media .fab {
-  font-size: 50px;
+.social__links {
+  font-size: 40px;
 }
 
 .project__links a {
@@ -459,7 +454,7 @@ section {
 }
 
 .project__image img {
-  border-radius: 0 10px 0 10px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
@@ -498,7 +493,7 @@ section {
   border: 2px solid var(--dull-white);
   outline: none;
   margin: 0.7rem 0;
-  border-radius: 11px;
+  /* border-radius: 11px; */
   padding-left: 0.3em;
   caret-color: var(--bright-yellow);
   /* font-family: "Montserrat"; */
@@ -511,6 +506,7 @@ input::placeholder {
 textarea,
 input {
   font-size: 1rem;
+  border-radius: 10px;
   /* font-family: "Montserrat"; */
 }
 input:focus,
@@ -530,14 +526,10 @@ textarea::placeholder {
 
 #submitBtn {
   width: 7em;
-  color: var(--bright-yellow);
-  font-size: 1rem;
-  text-decoration: none;
-  cursor: pointer;
-  border: 1px solid var(--bright-yellow);
-  border-radius: 20px;
+  padding: 0.3em 0.6em;
+  border: none;
+  background-color: var(--bright-yellow);
   text-transform: capitalize;
-  /* margin: 1rem auto; */
 }
 
 #submitBtn:hover {
@@ -603,6 +595,13 @@ textarea::placeholder {
 
   .scroll__down {
     display: none;
+  }
+
+  .project__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
   }
 
   .project__links {
